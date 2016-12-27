@@ -1,0 +1,44 @@
+<div *ngIf="event">
+
+    <section class="event col-md-6 col-sm-12">
+        <!-- Name -->
+        <h1>{{ event.name }}</h1>
+
+        <!-- Date -->
+        <div class="date">
+            <div class="start-time row">
+                <span class="col-xs-3">Start Time:</span>
+                <span class="value">{{ event.startTime | date: 'short' }}</span>
+            </div>
+            <div class="end-time row">
+                <span class="col-xs-3">End Time:</span>
+                <span class="value">{{ event.endTime | date: 'short' }}</span>
+            </div>
+        </div>
+
+        <!-- Target -->
+        <div *ngIf="target" class="target">
+            <div class="row">
+                <span class="col-xs-3">Target:</span>
+                <span class="value"><a [routerLink]="['/targets', target.id]">{{ target.name }}</a></span>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="description">{{ event.description }}</div>
+
+        <!-- Actions -->
+        <div class="actions btn-group-lg">
+            <a [routerLink]="['edit']" class="btn btn-lg btn-warning">Edit</a>
+            <a (click)="deleteEvent()" class="btn btn-lg btn-danger">Delete</a>
+            <a [routerLink]="['plugins']" class="btn btn-lg btn-success pull-right">Add Item</a>
+        </div>
+
+    </section>
+
+    <!-- Items -->
+    <section class="items col-lg-4 col-lg-offset-2 col-md-6 col-sm-12">
+        <items [event]="event"></items>
+    </section>
+
+</div>

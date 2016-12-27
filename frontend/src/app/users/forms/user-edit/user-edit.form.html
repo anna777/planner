@@ -1,0 +1,44 @@
+<div class="container">
+
+    <form [formGroup]="form" (submit)="onSubmit()">
+
+      <!-- Old password -->
+     <div class="form-group">
+         <label for="old_password">Old password</label>
+         <input
+                 class="form-control"
+                 formControlName="old_password"
+                 id="old_password"
+                 type="password">
+     </div>
+
+         <!-- Password -->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                    class="form-control"
+                    formControlName="password"
+                    id="password"
+                    type="password">
+        </div>
+
+        <!-- Confirm -->
+        <div class="form-group">
+            <label for="confirm">Confirm</label>
+            <input
+                    class="form-control"
+                    formControlName="confirm"
+                    id="confirm"
+                    type="password">
+        </div>
+
+        <!-- Submit -->
+        <button
+                class="btn btn-default"
+                type="submit">
+            Submit
+        </button>
+
+    </form>
+
+</div>

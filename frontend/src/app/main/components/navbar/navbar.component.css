@@ -1,0 +1,10 @@
+navbar {
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+.dropdown-menu > li > a {
+    cursor: pointer;
+}

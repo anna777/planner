@@ -1,0 +1,33 @@
+DB_CONFIG = {
+    'DRIVER': 'postgresql',
+    'USER': 'postgres',
+    'PASSWORD': 'pass',
+    'HOST': '127.0.0.1',
+    'PORT': 5432,
+    'NAME': 'planner_dev'
+}
+
+SECRET_KEY = '123'
+
+MAIL_USERNAME = 'planner018@yandex.ru'
+MAIL_PASSWORD = 'we<3planning'
+MAIL_DEFAULT_SENDER = 'Sender <noreply@example.com>'
+MAIL_SERVER = 'smtp.yandex.com'
+MAIL_PORT = 465
+MAIL_USE_SSL = True
+MAIL_USE_TLS = False
+
+USER_APP_NAME = "Planner"
+
+REDIS_CONFIG = {
+    'host': '127.0.0.1',
+    'port': 6379,
+}
+
+
+PLUGINS = {
+    "recipes": {
+        "host": "127.0.0.1",
+        "port": "6001"
+    }
+}

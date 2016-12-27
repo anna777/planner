@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+
+{% block page_content %}
+    <planner-app id="main-app">
+        <i class="loading"></i>
+    </planner-app>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='polyfills.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+{% endblock %}

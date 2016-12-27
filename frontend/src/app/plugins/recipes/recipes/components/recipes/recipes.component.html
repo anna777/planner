@@ -1,0 +1,18 @@
+<h2>Choose recipe</h2>
+
+<div class="recipes-wrapper">
+    <masonry [useImagesLoaded]="true" [options]="{columnWidth: '.grid-sizer', gutter: '.gutter-sizer', itemSelector: '.grid-item', percentPosition: true}"
+             class="recipes">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+        <masonry-brick
+                *ngFor="let recipe of recipes"
+                (click)="onSelect(recipe)"
+                class="recipe grid-item">
+            <img [src]="recipe.imageLink" alt="Recipe Image" class="image">
+            <div class="name">
+                {{ recipe.name }}
+            </div>
+        </masonry-brick>
+    </masonry>
+</div>

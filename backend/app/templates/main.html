@@ -1,0 +1,18 @@
+{%- extends "bootstrap/base.html" %}
+{% block head %}
+    <title>Planner</title>
+    <base href="/">
+    {{ super() }}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='assets/logo_1024.png') }}">
+
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% block page_content %}{% endblock %}
+    </div>
+{% endblock %}
